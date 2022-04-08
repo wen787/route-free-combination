@@ -1,7 +1,7 @@
 # route-free-combination
 支持批量导入路由并根据文件路径组装路由树
 
-##安装
+## 安装
 
 npm install route-free-combination --save
 
@@ -62,7 +62,7 @@ let modules  = {};
 
 routes.keys().forEach((key) => {
   if (key.indexOf('/route/index.js') > 0){
-    modules[key] = testRouter(key);
+    modules[key] = routes(key);
   }
 });
 
