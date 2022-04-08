@@ -2,13 +2,11 @@
  * 获取一个含目录信息的二维数组
  * */
 
-function getDireactoryArr(modules){
+function getDireactoryArr(modules,pattern){
     const direactoryArr = [];
-    let   diffLen       = 0;
+    let   diffLen       = pattern?pattern.split('/').length:6;
 
     Object.keys(modules).forEach((rmkey,index) => {
-        if(index == 0)
-            diffLen = rmkey.split('/');
 
         if (!direactoryArr[rmkey.split('/').length - diffLen]) {
             direactoryArr[rmkey.split('/').length - diffLen] = [];
@@ -54,8 +52,8 @@ function getRouteModuleList(direactoryArr, modules){
     return routeModuleList;
 }
 
-export default function (modules){
-    const direactoryArr = getDireactoryArr(modules);
+export default function (modules,pattern){
+    const direactoryArr = getDireactoryArr(modules,pattern);
 
     const routeModuleList = getRouteModuleList(direactoryArr,modules);
 

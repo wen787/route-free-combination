@@ -1,8 +1,9 @@
 {
   "name": "route-free-combination",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "description": "The route can be freely combined according to the file directory.",
-  "main": "index.js",
+  "main": "src/index.js",
+  "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
@@ -20,6 +21,10 @@
   "bugs": {
     "url": "https://github.com/wen787/route-free-combination/issues"
   },
+  "files": [
+    "dist",
+    "src"
+  ],
   "homepage": "https://github.com/wen787/route-free-combination#readme",
   "devDependencies": {
     "ts-loader": "^9.2.8",
