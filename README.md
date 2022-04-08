@@ -68,3 +68,42 @@ routes.keys().forEach((key) => {
 
 let routeModuleList = rfc(modules);      
 ```
+
+## 结果
+```
+[
+    {
+      path: 'user',
+      name: 'userManagement',
+      meta: {
+        orderNo: 1,          // 控制菜单顺序
+        title: '用户管理',
+        ignoreKeepAlive: true,
+      },
+      component: () => import('../index.vue'),
+      children:[
+        {
+          path: 'account',
+          name: 'account',
+          meta: {
+            orderNo: 1.1,          // 控制菜单顺序
+            title: '账号管理',
+            ignoreKeepAlive: true,
+          },
+          component: () => import('../index.vue'),
+        }
+      ]
+    }，
+    {
+      path: 'department',
+      name: 'department',
+      meta: {
+        orderNo: 2,          // 控制菜单顺序
+        title: '部门管理',
+        ignoreKeepAlive: true,
+      },
+      component: () => import('../index.vue'),
+     }
+]
+
+```
