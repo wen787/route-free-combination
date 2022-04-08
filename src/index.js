@@ -1,6 +1,6 @@
 
 import  getRoutesByDirectory from './getRoutesByDirectory'
 
-export default function (modules,pattern){
-   return getRoutesByDirectory(modules,pattern);
+export default function (modules){
+   return getRoutesByDirectory(modules);
 }

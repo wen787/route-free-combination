@@ -2,10 +2,13 @@
  * 获取一个含目录信息的二维数组
  * */
 
-function getDireactoryArr(modules,pattern){
+function getDireactoryArr(modules){
     const direactoryArr = [];
-    let   diffLen       = pattern?pattern.split('/').length:6;
+    let   diffLen       = 1000;
 
+    Object.keys(modules).forEach((rmkey,index) => {
+        diffLen = rmkey.split('/').length < diffLen? rmkey.split('/').length : diffLen;
+    })
     Object.keys(modules).forEach((rmkey,index) => {
 
         if (!direactoryArr[rmkey.split('/').length - diffLen]) {

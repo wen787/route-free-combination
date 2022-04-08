@@ -1,6 +1,6 @@
 {
   "name": "route-free-combination",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "The route can be freely combined according to the file directory.",
   "main": "src/index.js",
   "private": false,
